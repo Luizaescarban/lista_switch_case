@@ -5,10 +5,15 @@
     */
 
     //ENTRADA
-
-    
+    const num = parseInt(prompt(`Insira um número inteiro:`).trim());
     //PROCESSAMENTO
-
+    switch (num % 2){
+        case 0: 
+            document.write(`O número é par.`);
+            break
+       default: 
+         document.write(`O número é impar.`);
+        }
     
     //SAÍDA
 

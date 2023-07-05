@@ -8,11 +8,57 @@
     */
 
     //ENTRADA
-
-
+    const num = parseFloat(prompt(`Insira um número:`).trim().replace(",", "."));
+    const num2 = parseFloat(prompt(`insira outro número`).trim().replace(",", "."));
+    const operacao = prompt(`Insira a oparação desejada: Adição:+  Subtração:-  `).trim();
+    let valor = 0;
     //PROCESSAMENTO
+    switch (operacao) {
+        case "+":
+            valor = num + num2;
+            switch (valor % 2) {
+                case 0:
+                    document.write(`O valor a sua soma foi de ${valor}, ele é inteiro e par.`);
+                    break;
+                case 1:
+                    document.write(`O valor da sua soma resultou em ${valor}, ele é decimal e par.`);
+            }
+            break
+        case "-":
+            valor = num - num2;
+            switch (valor % 2) {
+                case 0:
+                    document.write(`O valor a sua soma foi de ${valor}, ele é inteiro e par.`);
+                    break;
+                case 1:
+                    document.write(`O valor da sua soma resultou em ${valor}, ele é decimal e par.`);
+            }
+            break;
+        case "*":
+            valor = num * num2;
+            switch (valor % 2) {
+                case 0:
+                    document.write(`O valor a sua soma foi de ${valor}, ele é inteiro e par.`);
+                    break;
+                case 1:
+                    document.write(`O valor da sua soma resultou em ${valor}, ele é decimal e par.`);
+            }
+            break;
+        case "/":
+            valor = num / num2;
+            switch (valor % 2) {
+                case 0:
+                    document.write(`O valor a sua soma foi de ${valor}, ele é inteiro e par.`);
+                    break;
+                case 1:
+                    document.write(`O valor da sua soma resultou em ${valor}, ele é decimal e par.`);
+            }
+            break;
 
-    
+        default:
+            break;
+    }
+
     //SAÍDA
 
 </script>
