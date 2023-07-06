@@ -6,10 +6,78 @@
     */
 
     //ENTRADA
+    const hemisferio = prompt(`Em qual hemisfério você está? N-norte S-sul`).trim().toUpperCase();
+    const mes = parseInt(prompt(`Em qual mês você está? Use: 1-janeiro 2-fevereiro 3-março 4-abril 5-maio 6-junho 7-julho 8-agosto 9-setembro 10-outubro 11-novembro 12-dezembro`).trim());
 
-    
     //PROCESSAMENTO
+    switch (hemisferio) {
+        case "N":
+            switch (mes) {
+                case 1:
+                case 2:
+                    document.write(`INVERNO!`);
+                    break;
+                case 3:
+                case 4:
+                case 5:
+                    document.write(`PRIMAVERA!`);
+                    break;
+                case 6:
+                case 7:
+                case 8:
+                    document.write(`VERÃO!`);
+                    break;
+                case 9:
+                case 10:
+                case 11:
+                    document.write(`OUTONO!`);
+                    break;
 
+                case 12:
+                    document.write(`INVERNO!`);
+                    break;
+
+                default:
+                    document.write(`Valor invalido`)
+                    break;
+            }
+            break;
+        case "S":
+            switch (mes) {
+                case 1:
+                case 2:
+                    document.write(`VERÃO!`);
+                    break;
+                case 3:
+                case 4:
+                case 5:
+                    document.write(`OUTONO!`);
+                    break;
+                case 6:
+                case 7:
+                case 8:
+                    document.write(`INVERNO!`);
+                    break;
+                case 9:
+                case 10:
+                case 11:
+                    document.write(`PRIMAVERA!`);
+                    break;
+
+                case 12:
+                    document.write(`VERÃO!`);
+                    break;
+
+                default:
+                    document.write(`Valor invalido`)
+                    break;
+            }
+            break;
+
+        default:
+            document.write(`Valor invalido`)
+            break;
+    }
 
     //SAÍDA
 

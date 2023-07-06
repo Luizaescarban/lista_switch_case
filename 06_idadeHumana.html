@@ -8,16 +8,25 @@
     // - cães grandes: fator 7.
 
     // ENTRADA
-    const idade = parseInt(prompt(`Qual a idade do se doquinho`).trim());
-    const porte = parseInt(prompt(`Qual o porte do seu doguinho: - cães de porte pequeno: fator 5 - cães de porte médio: fator 6 - cães grandes: fator 7.`).trim());
+    const idade = parseInt(prompt(`Qual a idade do se doguinho`).trim());
+    const porte = prompt(`Qual o porte do seu doguinho: P- pequeno M-médio G-grande.`).toUpperCase().trim();
     
     // PROCESSAMENTO
-    switch (key) {
-        case value:
-            
+    switch (porte) {
+        case "P":
+            const pcalculo = idade * 5;
+            document.write(`O seu doguinho tem em idade humana ${pcalculo} anos.`);
             break;
-    
+        case "M": 
+            const mcalculo = idade * 6;
+            document.write(`O seu doguinho tem em idade humana ${mcalculo} anos.`);
+            break;
+        case "G": 
+            const gcalculo = idade * 7;
+            document.write(`O seu doguinho tem em idade humana ${gcalculo} anos.`);
+            break;
         default:
+            document.write(`valor inválido`); 
             break;
     }
     

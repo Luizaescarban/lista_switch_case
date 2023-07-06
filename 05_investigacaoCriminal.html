@@ -11,10 +11,30 @@
     */
 
     //ENTRADA
-
-    
+    const pergunta1 = parseInt(prompt(`Telefonou para a vítima? 1(para sim) e 0(para nao)`).trim());
+    const pergunta2 = parseInt(prompt(`Esteve no local do crime? 1(para sim) e 0(para nao)`).trim());
+    const pergunta3 = parseInt(prompt(`Mora perto da vítima? 1(para sim) e 0(para nao)`).trim());
+    const pergunta4 = parseInt(prompt(`Devia para a vítima? 1(para sim) e 0(para nao)`).trim());
+    const pergunta5 = parseInt(prompt(`Já trabalhou com a vítima? 1(para sim) e 0(para nao)`).trim());
     //PROCESSAMENTO
-
+    const resultado = pergunta1 + pergunta2 + pergunta3 + pergunta4 + pergunta5  
+    //SAÍDA
+    switch (resultado) {
+        case 2:
+        alert(`Suspeita`);
+            break;
+            case 3: 
+            case 4:
+        alert(`Cumplice`);
+            break;
+            case 5:
+        alert(`Assassino`);
+            break;
+    
+        default:
+        alert(`Inocente`);
+            break;
+    }
 
     //SAÍDA
 
